@@ -46,10 +46,9 @@ public class Playlist {
 
     public Integer getMinimumNumberOfStepsBetween(Integer currentIndex, String desiredSong) {
         Integer distanceFromRight = getForwardNumberOfStepsBetween(currentIndex,desiredSong);
+        Integer distanceFromLeft = getBackwardNumberOfStepsBetween(currentIndex,desiredSong);
 
-
-        return Math.min(getBackwardNumberOfStepsBetween(currentIndex,desiredSong),
-                getForwardNumberOfStepsBetween(currentIndex,desiredSong));
+        return Math.min(distanceFromLeft,distanceFromRight);
     }
 
     public Integer getNumberOfStepsBetween(Integer currentIndex, String desiredSong, Runnable directionMutator) {

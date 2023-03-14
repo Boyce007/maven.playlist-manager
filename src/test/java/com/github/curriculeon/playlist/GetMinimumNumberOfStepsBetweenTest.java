@@ -86,7 +86,7 @@ public class GetMinimumNumberOfStepsBetweenTest {
         int startingIndex = 6;
         int expected = 2;
 
-        test(playlist, desiredSongIndex, startingIndex, expected);
+        test(playlist, startingIndex, desiredSongIndex, expected);
     }
 
     @Test
