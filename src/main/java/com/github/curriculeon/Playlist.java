@@ -4,10 +4,17 @@ package com.github.curriculeon;
  * Created by leon on 1/10/2021.
  */
 public class Playlist {
+    private String[] songs;
+    private Integer index;
     public Playlist(String[] songNameArray) {
+        index = 0;
+
+        songs = songNameArray;
     }
 
     public Playlist(int currentIndex, String[] songNameArray) {
+        index = currentIndex;
+        songs = songNameArray;
     }
 
     public String[] getSongNameArray() {
